@@ -10,7 +10,7 @@ export default function Home() {
   const [type, settype] = useState()
 
   const sendToApi = () => {
-    axios.post('/api/clientes' , {
+    axios.post('https://dragonsguto.herokuapp.com/dragons/' , {
     nome,
     type
     })
