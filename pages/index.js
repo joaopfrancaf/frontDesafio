@@ -12,7 +12,7 @@ export default function Home() {
   const sendToApi = () => {
     axios.post('/api/clientes' , {
     nome,
-    sobrenome
+    type
     })
 }
 
@@ -38,7 +38,7 @@ export default function Home() {
               <label for="first">name:</label>
               <input type="text" id="first" name="first" onChange={(e) => setNome(e.target.value)} />
               <label for="last">Type:</label>
-              <input type="text" id="last" name="last" onChange={(e) => setSobrenome(e.target.value)} />
+              <input type="text" id="last" name="last" onChange={(e) => settype(e.target.value)} />
               <button type="submit" onClick={sendToApi}>Submit</button>
             </form>
         </div>
