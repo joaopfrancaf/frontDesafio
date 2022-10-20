@@ -26,7 +26,7 @@ export default function Home() {
 
         <div className={styles.grid}>
             <form action="/send-data-here" method="post">
-              <label for="first">First name:</label>
+              <label for="first">name:</label>
               <input type="text" id="first" name="first" />
               <label for="last">Last name:</label>
               <input type="text" id="last" name="last" />
@@ -46,7 +46,7 @@ export default function Home() {
                       <tr key={i.id}> {/* key props para cada elemento*/}
                           <th>{i.id}</th>
                           <th>{i.name}</th>
-                          <th>{i.sobrenome}</th>
+                          <th>{i.type}</th>
                       </tr>
                   ))} 
               </tbody>
