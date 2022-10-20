@@ -6,6 +6,15 @@ import axios from 'axios';
 
 export default function Home() {
   const [apiData,setapiData] = useState([]);
+  const [nome, setNome] = useState()
+  const [type, settype] = useState()
+
+  const sendToApi = () => {
+    axios.post('/api/clientes' , {
+    nome,
+    sobrenome
+    })
+}
 
   useEffect(() => {
       axios.get('https://dragonsguto.herokuapp.com/dragons/find')
@@ -27,10 +36,10 @@ export default function Home() {
         <div className={styles.grid}>
             <form action="/send-data-here" method="post">
               <label for="first">name:</label>
-              <input type="text" id="first" name="first" />
-              <label for="last">Last name:</label>
-              <input type="text" id="last" name="last" />
-              <button type="submit">Submit</button>
+              <input type="text" id="first" name="first" onChange={(e) => setNome(e.target.value)} />
+              <label for="last">Type:</label>
+              <input type="text" id="last" name="last" onChange={(e) => setSobrenome(e.target.value)} />
+              <button type="submit" onClick={sendToApi}>Submit</button>
             </form>
         </div>
 
