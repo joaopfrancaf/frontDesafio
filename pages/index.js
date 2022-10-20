@@ -34,7 +34,7 @@ export default function Home() {
       <main className={styles.main}>
 
         <div className={styles.grid}>
-            <form action="/send-data-here" method="post">
+            <form method="post">
               <label for="first">name:</label>
               <input type="text" id="first" name="first" onChange={(e) => setNome(e.target.value)} />
               <label for="last">Type:</label>
